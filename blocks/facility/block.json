@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/facility",
+  "title": "Facility",
+  "description": "",
+  "category": "boatshed",
+  "keywords": ["facility"],
+  "_viewScript": ["blocks/facility"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/text",
+  "title": "Text",
+  "description": "",
+  "category": "boatshed",
+  "keywords": ["text"],
+  "_viewScript": ["blocks/text"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  }
+}

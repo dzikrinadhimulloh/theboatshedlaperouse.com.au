@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '_mixins';
+@import 'fonts';
+@import 'typography';
+@import 'blocks/index';
+
+header {
+  @apply transition-all duration-500 z-20;
+  .menu {
+    .btn-menu {
+      span {  
+        @apply h-[3px] w-[60px] lg:w-[70px] bg-white mb-3 last:mb-0 block;
+      }
+    }
+  }
+
+  .logo {
+    a svg {
+      @apply w-[196px] md:w-[235px] lg:w-[274px];
+      * {
+        @apply fill-white;
+      }
+    }
+  }
+
+  &.headroom--unpinned {
+    @apply -top-[125px];
+  }
+
+  &.headroom--pinned:not(.headroom--top) {
+    @apply bg-white text-blue;
+
+    .menu .btn-menu span { 
+      @apply bg-blue;
+    }
+
+    .logo a svg * {
+      @apply fill-blue;
+    }
+
+    .buttons {
+      .btn-book {
+
+      }
+    }
+  }
+}
+
+footer {
+  .top-container {
+    a svg {
+      @apply w-[180px] md:w-[160px] lg:w-[180px];
+      * {
+        @apply fill-metal;
+      }
+    }
+  }
+  .middle-container {
+    p {
+      @apply mb-6 font-sans-alt text-[16px] lg:text-[14px];
+      span {
+        @apply block md:inline-block;
+      }
+    }
+
+    br:not(.spacing) {
+      @apply hidden;
+    }
+
+    span.telephone {
+      @apply mb-6;
+    }
+
+    .social-links {
+      p {
+        @apply mb-0;
+      }
+    }
+  }
+}
+
+.button {
+  @apply inline-flex items-center leading-none;
+  &:not(.text) {
+    @apply rounded-[30px] bg-white text-blue;
+  }
+
+  svg {
+    @apply fill-blue inline-block ml-[10px];
+  }
+
+  &.dark {
+    @apply bg-dark-blue text-white;
+
+    svg {
+      @apply fill-white;
+    }
+  }
+
+  &.large {
+    @apply btn-text-1 py-5 px-8 rounded-[40px];
+  }
+
+  &.medium {
+    @apply btn-text-2 py-4 px-[30px];
+  }
+
+  &.small {
+    @apply font-sans-alt leading-5 btn-text-3 text-navy py-[9px] px-[30px] uppercase;
+  }
+
+  &.text {
+    @apply px-0 font-medium;
+
+    img {
+      @apply max-h-2;
+    }
+  } 
+}
+
+body {
+  @apply font-sans text-blue;
+}
+
+// for block padding
+.pt-sm {
+  @apply pt-[100px];
+} 
+
+.pt-md {
+  @apply pt-[100px] md:pt-[120px] lg:pt-[140px];
+}
+
+.pt-lg {
+  @apply pt-[120px] md:pt-[120px] lg:pt-[200px];
+}
+
+.pt-xl {
+  @apply pt-[192px] md:pt-[336px] lg:pt-[300px];
+}
+
+.pb-sm {
+  @apply pb-[100px];
+} 
+
+.pb-md {
+  @apply pb-[100px] md:pb-[120px] lg:pb-[140px];
+}
+
+.pb-lg {
+  @apply pb-[120px] md:pb-[120px] lg:pb-[200px];
+}
+
+.pb-xl {
+  @apply pb-[192px] md:pb-[336px] lg:pb-[300px];
+}
+
+.bc-transparent {
+
+}
+
+.bc-light-blue, .bc-blue, .bc-navy {
+  @apply text-white;
+}
+
+.bc-light-blue {
+  @apply bg-light-blue;
+}
+
+.bc-blue {
+  @apply bg-blue;
+} 
+
+.bc-navy {
+  @apply bg-navy;
+}
+
+.bc-white {
+  @apply bg-white;
+}
+
+.bc-gray {
+  @apply bg-gray;
+}
+
+.background {
+  @apply bg-no-repeat bg-cover text-white bg-black/30 bg-blend-multiply;
+}

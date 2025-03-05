@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/text-image",
+  "title": "Text Image",
+  "description": "",
+  "category": "boatshed",
+  "keywords": ["text-image"],
+  "_viewScript": ["blocks/text-image"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  }
+}

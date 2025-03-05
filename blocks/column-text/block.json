@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/column-text",
+  "title": "2 Column Text",
+  "description": "",
+  "category": "boatshed",
+  "keywords": ["column-text"],
+  "_viewScript": ["blocks/column-text"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  }
+}

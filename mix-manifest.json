@@ -1,0 +1,21 @@
+{
+    "/dist/app.js": "/dist/app.js",
+    "/dist/blocks/text.js": "/dist/blocks/text.js",
+    "/dist/app.css": "/dist/app.css",
+    "/dist/images/arrow-right-white.svg": "/dist/images/arrow-right-white.svg",
+    "/dist/images/arrow-right.svg": "/dist/images/arrow-right.svg",
+    "/dist/images/sample-image.jpg": "/dist/images/sample-image.jpg",
+    "/dist/images/↑.svg": "/dist/images/↑.svg",
+    "/dist/fonts/graphik/GraphikLight.otf": "/dist/fonts/graphik/GraphikLight.otf",
+    "/dist/fonts/graphik/GraphikRegular.otf": "/dist/fonts/graphik/GraphikRegular.otf",
+    "/dist/fonts/inter/Inter-Bold.woff": "/dist/fonts/inter/Inter-Bold.woff",
+    "/dist/fonts/inter/Inter-Bold.woff2": "/dist/fonts/inter/Inter-Bold.woff2",
+    "/dist/fonts/inter/Inter-Medium.woff": "/dist/fonts/inter/Inter-Medium.woff",
+    "/dist/fonts/inter/Inter-Medium.woff2": "/dist/fonts/inter/Inter-Medium.woff2",
+    "/dist/fonts/inter/Inter-Regular.woff": "/dist/fonts/inter/Inter-Regular.woff",
+    "/dist/fonts/inter/Inter-Regular.woff2": "/dist/fonts/inter/Inter-Regular.woff2",
+    "/dist/fonts/nib-pro/NibPro-Regular.ttf": "/dist/fonts/nib-pro/NibPro-Regular.ttf",
+    "/dist/fonts/nib-pro/NibPro-SemiBold.ttf": "/dist/fonts/nib-pro/NibPro-SemiBold.ttf",
+    "/dist/fonts/graphik/GraphikMedium.otf": "/dist/fonts/graphik/GraphikMedium.otf",
+    "/dist/images/arrow-right-black.svg": "/dist/images/arrow-right-black.svg"
+}
