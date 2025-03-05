@@ -41,5 +41,15 @@ add_action('wp_enqueue_scripts', function () {
 function get_main_logo_svg(){
     $main_logo = get_field('main_logo', 'option');
 
-    return $main_logo ? file_get_contents($main_logo['url']) : '';
+    return $main_logo ? fetch_url($main_logo['url']) : '';
+}
+
+function fetch_url($url) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+    $data = curl_exec($ch);
+    curl_close($ch);
+    return $data;
 }
