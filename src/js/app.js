@@ -68,7 +68,7 @@ import $ from 'jquery'
 
   // parallax =========================================
   gsap.registerPlugin(ScrollTrigger);
-  let getRatio = el => globalH / (globalH + el.offsetHeight);
+  let getRatio = el => globalH / (globalH + el.getBoundingClientRect().height);
 
   gsap.utils.toArray(".parallax-bg").forEach((el, i) => {
     var section = $(el).parent().get(0);

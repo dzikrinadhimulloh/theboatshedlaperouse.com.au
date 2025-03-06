@@ -316,3 +316,15 @@ body {
     @apply lg:bg-cover;
   }
 }
+
+.acf-block {
+  .parallax-bg {
+    background-size: auto 140%;
+    @screen md {
+      background-size: auto 110%;
+    }
+    @screen lg {
+      @apply lg:bg-cover;
+    }
+  }
+}
