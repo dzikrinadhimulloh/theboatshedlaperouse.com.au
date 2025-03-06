@@ -15,6 +15,7 @@ import $ from 'jquery'
   function get_global_variable() {
     $('html').css('--scrollbar-size', $(window).outerWidth() - $(window).width()+'px');
     $('html').css('--window-height', globalH);
+    $('html').css('--parallax-height', globalH * 1.4);
   }
 
   get_global_variable();

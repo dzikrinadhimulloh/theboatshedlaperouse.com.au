@@ -319,7 +319,7 @@ body {
 
 .acf-block {
   .parallax-bg {
-    background-size: auto 140%;
+    background-size: auto var(--parallax-height);
     @screen md {
       background-size: auto 110%;
     }
