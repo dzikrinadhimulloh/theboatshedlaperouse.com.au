@@ -307,7 +307,8 @@ body {
 }
 
 .parallax-bg {
-  @apply w-full h-full absolute top-0 left-0 bg-black/40 z-[-1] bg-repeat bg-top bg-fixed bg-auto;
+  @apply w-full h-full absolute top-0 left-0 bg-black/40 z-[-1] bg-repeat bg-top bg-fixed;
+  background-size: auto var(--window-height);
   @screen md {
     background-size: auto 110%;
   }

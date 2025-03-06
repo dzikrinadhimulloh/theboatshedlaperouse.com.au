@@ -1,6 +1,8 @@
 import $ from 'jquery'
 
 (function ($) {
+  var globalW = $(window).width(); 
+  var globalH = $(window).height(); 
 
   // global =========================================
   var headroom  = new Headroom($('header').get(0));
@@ -12,11 +14,10 @@ import $ from 'jquery'
 
   function get_global_variable() {
     $('html').css('--scrollbar-size', $(window).outerWidth() - $(window).width()+'px');
+    $('html').css('--window-height', globalH);
   }
 
   get_global_variable();
-  var globalW = $(window).width(); 
-  var globalH = $(window).height(); 
   $(window).on('resize', function(){
     if (globalW !== $(window).width()) {
       get_global_variable();
