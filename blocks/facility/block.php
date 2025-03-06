@@ -32,6 +32,7 @@ $facility  = get_field('facility', 'option');
 ?>
 
 <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
+    <?php print get_bg_parallax(); ?>
     <div class="container">
         <div class="grid grid-cols-12 text-center">
             <div class="col-span-12 lg:col-span-10 lg:col-start-2 2xl:col-span-8 2xl:col-start-3 flex flex-wrap justify-center md:justify-between gap-y-10 md:gap-y-0">

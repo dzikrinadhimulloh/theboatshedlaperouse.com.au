@@ -65,6 +65,7 @@ function get_global_block_classes() {
     $classes[] = get_field('padding_bottom');
     $classes[] = get_field('background_color');
     $classes[] = get_field('background_image') && !$parallax ? 'background' : '';
+    $classes[] = $parallax ? 'has-parallax' : '';
 
     return implode(' ', $classes);
 }

@@ -33,6 +33,7 @@ $blogs   = get_field('blogs');
 ?>
 
 <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?> overflow-hidden" style="<?php print $style; ?>">
+    <?php print get_bg_parallax(); ?>
     <div class="container">
         <div class="grid grid-cols-12">
             <div class="col-span-12 <?php print $type == 'padded' ? 'lg:col-span-10 lg:col-start-2 2xl:col-span-8 2xl:col-start-3' : ''; ?>">

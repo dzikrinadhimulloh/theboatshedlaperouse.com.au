@@ -258,6 +258,10 @@ body {
   }
 }
 
+.bc-transparent.has-parallax {
+  @apply text-white;
+}
+
 .bc-light-blue, .bc-blue, .bc-navy {
   @apply text-white;
 
@@ -300,5 +304,8 @@ body {
   @apply w-full h-full absolute top-0 left-0 bg-black/40 z-[-1] bg-repeat bg-top bg-fixed;
   @screen md {
     background-size: auto 110%;
+  }
+  @screen lg {
+    @apply bg-cover;
   }
 }

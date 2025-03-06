@@ -24,12 +24,20 @@ if ( ! empty( $block['className'] ) ) {
 if ( ! empty( $block['align'] ) ) {
     $classes .= ' align' . $block['align'];
 }
+
+$classes .= get_global_block_classes();
+$style   = get_global_block_bg();
+$content = get_field('content');
+
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
+<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="<?php print $style; ?>">
+    <?php print get_bg_parallax(); ?>
     <div class="container">
-        <h2 class="pt-[100px] pb-[100px]">
-            TODO: blocks/<id>
-        </h2>
-    </div>
+        <div class="grid grid-cols-12">
+            <div class="col-span-12 lg:col-span-10 lg:col-start-2 2xl:col-span-8 2xl:col-start-3">
+                <?php print apply_filters( 'the_content', $content ); ?>
+            </div>
+        </div>
+    </div> 
 </div>
