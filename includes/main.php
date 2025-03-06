@@ -28,13 +28,17 @@ add_action('after_setup_theme', function () {
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('headroom-js', 'https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js', array(), null, true);
+    wp_enqueue_script('swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
+    wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', array(), null, true);
+    wp_enqueue_script('scrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', array(), null, true);
+    wp_enqueue_style('swiper-bundle-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', [], null);
 
     wp_enqueue_style('app', assets_url('/dist/app.css'), [], null);
     wp_enqueue_script('app', assets_url('/dist/app.js'), ['jquery'], null, true);
 
     // Register script for blocks
     // If needed, separate the script per block
-    wp_register_script('blocks/text', assets_url('/dist/blocks/text.js'), ['jquery'], null, true);
+    wp_register_script('blocks/slider', assets_url('/dist/blocks/slider.js'), ['jquery'], null, true);
 });
 
 

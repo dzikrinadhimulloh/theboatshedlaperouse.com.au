@@ -48,7 +48,7 @@
   h6 {
     @apply text-[20px] md:text-[22px] lg:text-[20px];
     //@include pixelsToResponsiveUnit(font-size, 50px, 78px, 78px);
-    @apply leading-[1.4] tracking-[-0.5px] mb-10 lg:mb-[60px];
+    @apply leading-[1.4] tracking-[-0.5px] mb-10 lg:mb-[20px];
   }
 
   p {

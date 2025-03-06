@@ -25,6 +25,7 @@ mix.copy("src/fonts", "dist/fonts");
 mix
   .js("src/js/app.js", "dist")
   .js("src/js/blocks/text.js", "dist/blocks")
+  .js("src/js/blocks/slider.js", "dist/blocks")
   .sass("src/scss/app.scss", "dist")
   .options({
     processCssUrls: false,

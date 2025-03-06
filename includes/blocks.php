@@ -2,18 +2,19 @@
 
 define('CUSTOM_BLOCKS', [
     'page' => [
-        'text', 'column-text', 'facility', 'text-image'
+        'text', 'column-text', 'facility', 'text-image', 'slider', 'blog-slider'
     ],
     'post' => [
-        'text', 'column-text', 'facility', 'text-image'
+        //'text', 'column-text', 'facility', 'text-image', 'slider'
     ],
 ]);
 
 $allowed_core_blocks = [
     // Add allowed core blocks here
-    // 'post' => [
-    //     'core/paragraph',
-    // ],
+    'post' => [
+        'core/paragraph',
+        'core/freeform',
+    ],
 ];
 
 /**
@@ -57,16 +58,22 @@ add_filter('allowed_block_types_all', function($allowed_blocks, $editor_context)
 
 
 function get_global_block_classes() {
+    $parallax = get_field('parallax') ?? false; 
     $classes = [];
-    $classes[] = ' ';
+    $classes[] = ' relative ';
     $classes[] = get_field('padding_top');
     $classes[] = get_field('padding_bottom');
     $classes[] = get_field('background_color');
-    $classes[] = get_field('background_image') ? 'background' : '';
+    $classes[] = get_field('background_image') && !$parallax ? 'background' : '';
 
     return implode(' ', $classes);
 }
 
 function get_global_block_bg() {
-    return ($bgImg = get_field('background_image')) ? 'background-image:url('.$bgImg['url'].')' : ''; 
+    return ($bgImg = get_field('background_image')) ? '--bg-url:url('.$bgImg['url'].')' : ''; 
+}
+
+function get_bg_parallax() {
+    $parallax = get_field('parallax') ?? false; 
+    return $parallax == true ? '<div class="parallax-bg"></div>' : '';
 }

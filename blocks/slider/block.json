@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/slider",
+  "title": "Slider",
+  "description": "",
+  "category": "boatshed",
+  "keywords": ["slider"],
+  "_viewScript": ["blocks/slider"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  }
+}

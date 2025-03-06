@@ -81,7 +81,8 @@ module.exports = {
         navy: '#0D2033',
         'dark-blue': '#003974',
         black: '#2D2D2D',
-        gray: '#F2F2F2'
+        gray: '#F2F2F2',
+        'dark-gray': '#424242',
       }
     },
   },

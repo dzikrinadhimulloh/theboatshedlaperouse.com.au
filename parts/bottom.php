@@ -9,7 +9,7 @@
         <div class="grid max-w-[1266px] mx-auto">
             <div class="top-container flex flex-col lg:flex-row items-center justify-between mb-10 md:mb-[70px]">
                 <div class="logo">
-                    <a href="/" class="mb-10 lg:mb-0 block">
+                    <a href="<?php print home_url(); ?>" class="mb-10 lg:mb-0 block">
                         <?php print get_main_logo_svg(); ?>
                     </a>
                 </div>
