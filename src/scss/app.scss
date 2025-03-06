@@ -27,7 +27,7 @@
   .menu {
     .btn-menu {
       span {  
-        @apply h-[3px] w-[60px] lg:w-[70px] bg-white block transition-all duration-500;
+        @apply h-[3px] w-[60px] lg:w-[70px] bg-white block transition-all duration-500 relative;
       }
     }
   }
@@ -99,6 +99,12 @@ header {
 .menu-panel {
   &.active {
     @apply z-[9999];
+  }
+  
+  .btn-menu {
+    span {  
+      @apply top-[50%] relative;
+    }
   }
   .address-container {
     p a {
@@ -301,11 +307,11 @@ body {
 }
 
 .parallax-bg {
-  @apply w-full h-full absolute top-0 left-0 bg-black/40 z-[-1] bg-repeat bg-top bg-fixed;
+  @apply w-full h-full absolute top-0 left-0 bg-black/40 z-[-1] bg-repeat bg-top bg-fixed bg-auto;
   @screen md {
     background-size: auto 110%;
   }
   @screen lg {
-    @apply bg-cover;
+    @apply lg:bg-cover;
   }
 }

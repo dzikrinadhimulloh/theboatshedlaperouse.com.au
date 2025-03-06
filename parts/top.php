@@ -28,7 +28,7 @@
 <div class="menu-panel bg-white fixed top-0 left-0 right-0 bottom-0 z-[-1] transition-all duration-300 opacity-0 flex flex-col justify-between">
     <div class="flex items-center justify-between py-[13px] md:py-5 px-5 md:px-[30px] h-[86px] md:h-[122px] top-container">
         <div class="basis-2/4 menu order-2 lg:order-1 text-right lg:text-left">
-            <a href="#open-menu" class="btn-menu inline-block h-[50px] content-center">
+            <a href="#open-menu" class="btn-menu inline-block h-[50px]">
                 <span></span>
                 <span></span>
             </a>

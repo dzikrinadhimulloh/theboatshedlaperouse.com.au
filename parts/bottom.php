@@ -47,7 +47,7 @@
                 <?php if ($bottom_button_links): ?>
                     <div class="bottom-button text-center mb-10 flex flex-col md:flex-row flex-wrap justify-center items-center">
                         <?php foreach ($bottom_button_links as $btn): ?>
-                            <a href="<?php print $btn['link']['url']; ?>" class="button small mb-[10px] md:mb-0 md:mr-[10px] md:last:mr-0">
+                            <a href="<?php print $btn['link']['url']; ?>" class="button no-border small mb-[10px] md:mb-0 md:mr-[10px] md:last:mr-0">
                                 <?php print $btn['link']['title']; ?>
                             </a>
                         <?php endforeach; ?>

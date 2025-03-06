@@ -16,6 +16,7 @@ import $ from 'jquery'
 
   get_global_variable();
   var globalW = $(window).width(); 
+  var globalH = $(window).height(); 
   $(window).on('resize', function(){
     if (globalW !== $(window).width()) {
       get_global_variable();
@@ -66,7 +67,7 @@ import $ from 'jquery'
 
   // parallax =========================================
   gsap.registerPlugin(ScrollTrigger);
-  let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
+  let getRatio = el => globalH / (globalH + el.offsetHeight);
 
   gsap.utils.toArray(".parallax-bg").forEach((el, i) => {
     var section = $(el).parent().get(0);
@@ -74,7 +75,7 @@ import $ from 'jquery'
     gsap.fromTo(el, {
       backgroundPosition: () => "50% 0px"
     }, {
-      backgroundPosition: () => `50% ${speed * window.innerHeight * getRatio(section)}px`,
+      backgroundPosition: () => `50% ${speed * globalH * getRatio(section)}px`,
       ease: "none",
       scrollTrigger: {
         trigger: el,
