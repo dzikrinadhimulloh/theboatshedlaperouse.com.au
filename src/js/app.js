@@ -40,33 +40,44 @@ import $ from 'jquery'
 	});
 
   // menu ===========================================
-  $(document).on('click', '[href="#open-menu"]', function(e){
+  
+  $(document).on('click', '[href="#open-menu"], [href="#open-menu-links"]', function(e){
     e.preventDefault();
-    var $menuPanel = $('.menu-panel');
-    $menuPanel.toggleClass('opened');
-
-    if (!$menuPanel.hasClass('active')) {
-      $menuPanel.addClass('active');
-      $menuPanel.removeClass('z-[-1]');
-      $('html').addClass('disable-scroll');
-
-      setTimeout(() => {
-        $menuPanel.removeClass('opacity-0');
-      }, 100);
-    } else {
-      $menuPanel.addClass('opacity-0');
-      
-      setTimeout(() => {
-        $('html').removeClass('disable-scroll');
-      }, 150);
-
-      setTimeout(() => {
-        $menuPanel.removeClass('active');
-        $menuPanel.addClass('z-[-1]');
-      }, 200);
+    var $menuPanel = $(this).hasClass('btn-menu') ? $('.menu-panel:not(.menu-link-panel)') : $('.menu-link-panel');
+    var $menuPanelOpened = $('.menu-panel.opened');
+    if ($menuPanelOpened.length > 0) {
+      hide_panel($menuPanelOpened);
     }
+
+    show_panel($menuPanel);
   })
 
+  $(document).on('click', '[href="#close-menu"]', function(e){
+    e.preventDefault();
+    var $menuPanel = $('.menu-panel');
+    hide_panel($menuPanel);
+  })
+
+  function show_panel($menuPanel){
+    $menuPanel.addClass('opened active').removeClass('z-[-1]');
+    $('html').addClass('disable-scroll');
+
+    setTimeout(() => {
+      $menuPanel.removeClass('opacity-0');
+    }, 100);
+  }
+
+  function hide_panel($menuPanel){
+    $menuPanel.addClass('opacity-0').removeClass('opened');
+      
+    setTimeout(() => {
+      $('html').removeClass('disable-scroll');
+    }, 150);
+
+    setTimeout(() => {
+      $menuPanel.removeClass('active').addClass('z-[-1]');
+    }, 200);
+  }
 
   // parallax =========================================
   gsap.registerPlugin(ScrollTrigger);
@@ -82,5 +93,41 @@ import $ from 'jquery'
       }
     });
   });
+
+  gsap.utils.toArray(".animate-speed").forEach((el) => {
+    var speed = $(el).data('speed');
+    gsap.to(el, {
+      yPercent: - (75 * speed), 
+      ease: "none",
+      scrollTrigger: {
+        trigger: el.parentElement, 
+        start: "5% top",
+        end: "bottom top",
+        scrub: true,
+      }
+    });
+  });
+
+  gsap.utils.toArray(".acf-block").forEach((el) => {
+    var seq = 1;
+    $(el).find("[item-fade-animate]").each(function(){
+      gsap.fromTo(this, {
+        opacity: 0
+      },{
+        opacity: 1, 
+        ease: "none",
+        delay: seq * 0.3,
+        scrollTrigger: {
+          trigger: el, 
+          start: "top 85%",
+          end: "bottom top",
+        }
+      });
+      seq++;
+    });
+  });
+
+  
+  
 
 })($)

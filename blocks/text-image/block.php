@@ -40,9 +40,9 @@ $content = get_field('content');
                     <?php foreach ($content as $item): ?>
                         <div class="item flex flex-col md:flex-row mb-20 md:mb-[100px] lg:mb-[120px] last:mb-0 md:even:flex-row-reverse md:gap-x-12 lg:gap-x-20 items-center">
                             <div class="basis-full md:basis-1/2 mb-10 md:mb-0">
-                                <img src="<?php print $item['image']['url'] ?>" alt="<?php print $item['image']['alt_text']; ?>">
+                                <img src="<?php print $item['image']['url'] ?>" alt="<?php print $item['image']['alt_text']; ?>" item-fade-animate>
                             </div>
-                            <div class="basis-full md:basis-1/2">
+                            <div class="basis-full md:basis-1/2" item-fade-animate>
                                 <h2 class="mb-5"><?php print $item['title']; ?></h2>
                                 <div class="text-black">
                                     <?php print apply_filters('the_content', $item['text']); ?>

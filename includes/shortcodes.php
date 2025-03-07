@@ -60,12 +60,13 @@ function shortcode_button($args = array(), $content = '') {
     $title       = $args['title'] ?? '';
     $icon        = $args['icon'] ?? '';
     $class       = $args['class'] ?? '';
+    $target      = $args['target'] ?? '';
     
     if ($icon) { 
         $icon = '<img class="ml-[10px]" src="'.assets_url('/dist/images/'.$icon.'.svg').'">';
     }
 
-    return '<a href="'.$href.'" class="button '.$color.' '.$size.' '.$class.'">'.$title.$icon.'</a>';
+    return '<a href="'.$href.'" class="button text-center '.$color.' '.$size.' '.$class.'" target="'.$target.'">'.$title.$icon.'</a>';
 }
 add_shortcode( 'button', 'shortcode_button' );
 
@@ -74,5 +75,11 @@ function shortcode_indent($args = array(), $content = '') {
     return '<div class="md:ml-[120px] lg:ml-[260px] lg:pr-5">'.$content.'</div>';
 }
 add_shortcode( 'indent', 'shortcode_indent' );
+
+
+function shortcode_max_width($args = array(), $content = '') {
+    return '<div class="lg:max-w-[650px]">'.$content.'</div>';
+}
+add_shortcode( 'max-width', 'shortcode_max_width' );
 
 ?>

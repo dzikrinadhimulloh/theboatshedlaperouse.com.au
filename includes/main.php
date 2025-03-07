@@ -41,11 +41,16 @@ add_action('wp_enqueue_scripts', function () {
     wp_register_script('blocks/slider', assets_url('/dist/blocks/slider.js'), ['jquery'], null, true);
 });
 
-
 function get_main_logo_svg(){
     $main_logo = get_field('main_logo', 'option');
 
     return $main_logo ? fetch_url($main_logo['url']) : '';
+}
+
+function get_secondary_logo_svg(){
+    $secondary_logo = get_field('secondary_logo', 'option');
+
+    return $secondary_logo ? fetch_url($secondary_logo['url']) : '';
 }
 
 function fetch_url($url) {

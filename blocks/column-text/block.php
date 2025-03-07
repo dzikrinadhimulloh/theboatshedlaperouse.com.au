@@ -38,10 +38,10 @@ $right_content = get_field('right_content');
         <div class="grid grid-cols-12">
             <div class="col-span-12 lg:col-span-10 lg:col-start-2 2xl:col-span-8 2xl:col-start-3">
                 <div class="grid grid-cols-12">
-                    <div class="col-span-12 md:col-span-10 md:col-start-2 lg:col-start-1 lg:col-span-5 mb-[60px] lg:mb-0">
+                    <div class="col-span-12 md:col-span-10 md:col-start-2 lg:col-start-1 lg:col-span-5 mb-[60px] lg:mb-0" item-fade-animate>
                         <?php print apply_filters( 'the_content', $left_content ); ?>                    
                     </div>
-                    <div class="col-span-12 md:col-span-10 md:col-start-2 lg:col-span-5 lg:col-start-8">
+                    <div class="col-span-12 md:col-span-10 md:col-start-2 lg:col-span-5 lg:col-start-8" item-fade-animate>
                         <?php print apply_filters( 'the_content', $right_content ); ?>                    
                     </div>
                 </div>

@@ -38,7 +38,7 @@ $facility  = get_field('facility', 'option');
             <div class="col-span-12 lg:col-span-10 lg:col-start-2 2xl:col-span-8 2xl:col-start-3 flex flex-wrap justify-center md:justify-between gap-y-10 md:gap-y-0">
                 <?php if ($facility): ?>
                     <?php foreach ($facility as $key => $value): ?>
-                        <div class="item text-center basis-1/3 md:basis-1/5">
+                        <div class="item text-center basis-1/3 md:basis-1/5" item-fade-animate>
                             <img src="<?php print $value['icon']['url']; ?>" alt="<?php print htmlspecialchars($value['title']); ?>" class="h-[60px] mx-auto">
                             <p class="p2 mt-5"><?php print $value['title']; ?></p>
                         </div>

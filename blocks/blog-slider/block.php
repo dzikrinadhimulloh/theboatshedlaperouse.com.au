@@ -41,12 +41,14 @@ $blogs   = get_field('blogs');
                     <div class="swiper-blog overflow-visible <?php print $type; ?>">
                         <div class="swiper-wrapper">
                             <?php foreach ($blogs as $item): ?>
-                                <div class="swiper-slide mr-5 last:mr-0 h-auto min-h-[450px] md:min-h-[480px] w-[300px] md:w-[320px] lg:w-[340px] flex flex-col">
-                                    <img src="<?php print get_the_post_thumbnail_url( $item->ID ); ?>" alt="<?php print $item->post_title; ?>" class="w-full h-[264px] md:h-[282px] lg:h-[300px] object-cover">
-                                    <div class="text-container grow">
-                                        <h4 class="text-[22px] md:text-[24px] lg:text-[26px] mb-[10px] text-blue"><?php print $item->post_title; ?></h4>
-                                        <p class="p2 font-sans-alt text-dark-gray"><?php print get_the_excerpt( $item->ID ); ?></p>
-                                    </div>
+                                <div class="swiper-slide mr-5 last:mr-0 h-auto min-h-[450px] md:min-h-[480px] w-[300px] md:w-[320px] lg:w-[340px] flex flex-col overflow-hidden" item-fade-animate>
+                                    <a href="<?php print get_permalink( $item->ID ); ?>">
+                                        <img src="<?php print get_the_post_thumbnail_url( $item->ID ); ?>" alt="<?php print $item->post_title; ?>" class="w-full h-[264px] md:h-[282px] lg:h-[300px] object-cover transition-all duration-200 hover:scale-110">
+                                        <div class="relative text-container grow z-10">
+                                            <h4 class="text-[22px] md:text-[24px] lg:text-[26px] mb-[10px] text-blue"><?php print $item->post_title; ?></h4>
+                                            <p class="p2 font-sans-alt text-dark-gray"><?php print get_the_excerpt( $item->ID ); ?></p>
+                                        </div>
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         </div>

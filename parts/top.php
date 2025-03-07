@@ -1,6 +1,8 @@
 <?php
-    $main_nav    = wp_get_nav_menu_items( 'Main Nav' );
-    $booking_url = get_field('booking_url', 'option');
+    $main_nav     = wp_get_nav_menu_items( 'Main Nav' );
+    $booking_url  = get_field('booking_url', 'option');
+    $dine_in_menu = get_field('dine_in_menu', 'option');
+    $set_menu     = get_field('set_menu', 'option');
 ?>  
 
 <header class="headroom fixed top-0 left-0 right-0 flex items-center justify-between py-[13px] md:py-5 px-5 md:px-[30px]">
@@ -21,24 +23,27 @@
                 <?php print do_shortcode( '[button size="medium btn-book" href="'.$booking_url.'" title="Book a Table"]' ); ?>
             </div>
         <?php endif; ?>
-        <?php print do_shortcode( '[button size="medium" color="dark" href="#" title="View Menus" ]' ); ?>
+        <?php print do_shortcode( '[button size="medium" color="dark" href="#open-menu-links" title="View Menus" ]' ); ?>
     </div>
 </header>
 
-<div class="menu-panel bg-white fixed top-0 left-0 right-0 bottom-0 z-[-1] transition-all duration-300 opacity-0 flex flex-col justify-between">
-    <div class="flex items-center justify-between py-[13px] md:py-5 px-5 md:px-[30px] h-[86px] md:h-[122px] top-container">
-        <div class="basis-2/4 menu order-2 lg:order-1 text-right lg:text-left">
-            <a href="#open-menu" class="btn-menu inline-block h-[50px]">
-                <span></span>
-                <span></span>
-            </a>
-        </div>
-        <div class="basis-2/4 buttons lg:text-right order-1 lg:order-2">
-            <?php if ($booking_url): ?>
-                <?php print do_shortcode( '[button size="medium btn-book" color="dark" href="'.$booking_url.'" title="Book a Table"]' ); ?>
-            <?php endif; ?>
+<div class="menu-panel menu-link-panel bg-blue fixed top-0 left-0 right-0 bottom-0 z-[-1] transition-all duration-300 opacity-0 flex flex-col">
+    <?php get_template_part( 'parts/menu-panel-header' ) ?>
+    <div class="container flex flex-col items-center justify-center basis-5/6">
+        <div class="w-[90%] md:w-[500px] flex items-center justify-center flex-col">
+            <?php print get_secondary_logo_svg(); ?>
+            <div class="mt-[50px] md:mt-20 mb-5 w-full">
+                <?php print do_shortcode( '[button size="large" href="'.$dine_in_menu['url'].'" target="_blank" color="dark" title="Dine In Menu"]' ); ?>
+            </div>
+            <div class="w-full">
+                <?php print do_shortcode( '[button size="large" href="'.$set_menu['url'].'" target="_blank" color="dark" title="Set Menu"]' ); ?>
+            </div>
         </div>
     </div>
+</div>
+
+<div class="menu-panel bg-white fixed top-0 left-0 right-0 bottom-0 z-[-1] transition-all duration-300 opacity-0 flex flex-col justify-between">
+    <?php get_template_part( 'parts/menu-panel-header', null, ['button_color' => 'dark'] ) ?>
     <div class="container flex pb-[75px] md:pb-[80px] lg:pb-[90px] flex-col lg:flex-row">
         <div class="lg:basis-[65%] xl:basis-[54%]">
             <?php if ($main_nav): ?>
@@ -67,12 +72,12 @@
                     <?php print do_shortcode( '[address type="2"]' )?>
                 </div>
             </div>
-            <div class="flex flex-col xl:items-center mt-10 md:mt-20 xl:mt-0 xl:pl-10">
+            <div class="flex flex-col xl:items-center mt-10 md:mt-20 xl:mt-0 xl:pl-2 2xl:pl-8">
                 <span class="mb-[10px]">
                     <?php print do_shortcode( '[button size="large" href="'.$booking_url.'" title="Book a Table" icon="arrow-right"]' ); ?>
                 </span>
                 <span>
-                    <?php print do_shortcode( '[button size="large" color="dark" href="" title="View Menus" icon="arrow-right-white"]' ); ?>
+                    <?php print do_shortcode( '[button size="large" color="dark" href="#open-menu-links" title="View Menus" icon="arrow-right-white"]' ); ?>
                 </span>
             </div>
         </div>

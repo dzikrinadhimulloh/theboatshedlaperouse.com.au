@@ -66,7 +66,7 @@ header {
     a svg {
       @apply w-[196px] h-[53px] md:w-[235px] md:h-[64px] lg:w-[274px] lg:h-[75px];
       * {
-        @apply fill-white;
+        @apply fill-white transition-colors duration-300;
       }
     }
   }
@@ -106,11 +106,27 @@ header {
       @apply top-[50%] relative;
     }
   }
+  
   .address-container {
     p a {
       @apply no-underline;
     }
   }
+
+  &.menu-link-panel {
+    .btn-menu span {
+      @apply bg-white;
+    }
+
+    .container {
+      svg {
+        @apply w-[160px] md:w-[196px];
+      }
+      a {
+        @apply w-full justify-center border-white;
+      }
+    }
+  } 
 }
 
 footer {
@@ -147,14 +163,25 @@ footer {
 }
 
 .button {
-  @apply inline-flex items-center leading-none transition-all duration-500;
+  @apply inline-flex items-center leading-none transition-all duration-500 hover:brightness-90;
+
+  &:hover {
+    img {
+      @apply ml-[14px] -mr-1;
+    }
+  }
+
   &:not(.text) {
     @apply rounded-[30px] bg-white text-blue border-2 border-blue;
   }
 
-  svg {
-    @apply fill-blue inline-block ml-[10px];
+  img {
+    @apply transition-all duration-300;
   }
+
+  // svg {
+  //   @apply fill-blue inline-block ml-[10px];
+  // }
 
   &.no-border {
     @apply border-none;
