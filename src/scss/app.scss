@@ -244,6 +244,11 @@ body {
       @apply bg-white pt-5 px-5 pb-8 h-full;
     }
   }
+  &.padded {
+    .img-container {
+      @apply mb-5;
+    }
+  }
 }
 
 // for block padding
