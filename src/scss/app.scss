@@ -324,5 +324,5 @@ body {
 }
 
 .parallax-bg {
-  @apply w-full h-[125%] absolute top-0 left-0 bg-black/40 z-[-1];
+  @apply w-full h-[125%] absolute top-0 left-0 bg-black/40 z-[-1] bg-center;
 }
