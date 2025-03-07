@@ -59,6 +59,8 @@ add_filter('allowed_block_types_all', function($allowed_blocks, $editor_context)
 
 function get_global_block_classes() {
     $parallax = get_field('parallax') ?? false; 
+    $overlay  = get_field('overlay') ?? false;
+
     $classes = [];
     $classes[] = ' relative ';
     $classes[] = get_field('padding_top');
@@ -66,6 +68,7 @@ function get_global_block_classes() {
     $classes[] = get_field('background_color');
     $classes[] = get_field('background_image') && !$parallax ? 'background' : '';
     $classes[] = $parallax ? 'has-parallax' : '';
+    $classes[] = $overlay ? 'has-overlay' : '';
 
     return implode(' ', $classes);
 }
@@ -76,5 +79,5 @@ function get_global_block_bg() {
 
 function get_bg_parallax() {
     $parallax = get_field('parallax') ?? false; 
-    return $parallax == true ? '<div class="parallax-bg"></div>' : '';
+    return $parallax == true ? '<div class="parallax-outer"><div class="parallax-bg"></div></div>' : '';
 }

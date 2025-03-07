@@ -67,23 +67,18 @@ import $ from 'jquery'
     }
   })
 
+
   // parallax =========================================
   gsap.registerPlugin(ScrollTrigger);
-  let getRatio = el => globalH / (globalH + el.getBoundingClientRect().height);
-
-  gsap.utils.toArray(".parallax-bg").forEach((el, i) => {
-    var section = $(el).parent().get(0);
-    var speed   = -0.3; 
-    gsap.fromTo(el, {
-      backgroundPosition: () => "50% 0px"
-    }, {
-      backgroundPosition: () => `50% ${speed * globalH * getRatio(section)}px`,
+  gsap.utils.toArray(".parallax-bg").forEach((el) => {
+    gsap.to(el, {
+      yPercent: -20, 
       ease: "none",
       scrollTrigger: {
-        trigger: el,
-        start: () => i ? "top bottom" : "top top", 
+        trigger: el.parentElement, 
+        start: "top bottom",
         end: "bottom top",
-        scrub: true, 
+        scrub: true,
       }
     });
   });

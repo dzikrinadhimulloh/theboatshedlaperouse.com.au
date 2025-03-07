@@ -81,13 +81,13 @@
                 "bc-light-blue": "Light Blue",
                 "bc-blue": "Blue",
                 "bc-navy": "Navy",
-                "bc-gray": "Gray"
+                "bc-gray": "Gray",
+                "bc-white": "White"
             },
             "default_value": false,
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
-            "allow_in_bindings": 0,
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
@@ -144,6 +144,33 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_67ca586e95e43",
+            "label": "Overlay",
+            "name": "overlay",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67c67400f9689",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -164,5 +191,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741251489
+    "modified": 1741314201
 }
