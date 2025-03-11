@@ -28,7 +28,7 @@
 </header>
 
 <div class="menu-panel menu-link-panel bg-blue fixed top-0 left-0 right-0 bottom-0 z-[-1] transition-all duration-300 opacity-0 flex flex-col">
-    <div class="container absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+    <div class="container absolute top-0 left-0 right-0 bottom-0 w-full h-full flex flex-col items-center justify-center">
         <div class="w-[90%] md:w-[500px] flex items-center justify-center flex-col">
             <?php print get_secondary_logo_svg(); ?>
             <div class="mt-[50px] md:mt-20 mb-5 w-full">
