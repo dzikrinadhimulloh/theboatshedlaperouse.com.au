@@ -342,7 +342,7 @@ body {
   @apply bg-gray;
 }
 
-.background:not(.has-fixed-bg), .parallax-bg {
+.background, .parallax-bg {
   @apply bg-no-repeat bg-cover;
   background-image: var(--bg-url);
 }
@@ -352,8 +352,7 @@ body {
 }
 
 .acf-block.has-fixed-bg {
-  background: var(--bg-url) fixed;
-  @apply bg-no-repeat bg-cover;
+  background-attachment: fixed;
 }
 
 .acf-block:not(.has-overlay) {
