@@ -46,7 +46,7 @@ $title      = get_field('title');
                             <div class="accordion-item relative p-4 md:py-5 md:px-[30px] rounded-xl overflow-hidden last-of-type:mb-0 mb-[10px] bg-gray">
                                 <div class="accordion-title cursor-pointer flex items-center justify-between">
                                     <p class="text-black font-medium"><?php print $val['title']; ?></p>
-                                    <div class="icon basis-auto"></div>
+                                    <div class="icon basis-auto grow-0 shrink-0"></div>
                                 </div>
                                 <div class="accordion-content mt-0 h-0 transition-all duration-500 overflow-hidden text-black">
                                     <?php print apply_filters( 'the_content', $val['text'] ); ?>
