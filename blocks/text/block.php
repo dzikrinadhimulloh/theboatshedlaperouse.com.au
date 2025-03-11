@@ -31,7 +31,7 @@ $content = get_field('content');
 
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="<?php print $style; ?>">
+<section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="<?php print $style; ?>">
     <?php print get_bg_parallax(); ?>
     <div class="container">
         <div class="grid grid-cols-12" item-fade-animate>
@@ -40,4 +40,4 @@ $content = get_field('content');
             </div>
         </div>
     </div> 
-</div>
+</section>

@@ -33,7 +33,7 @@ $title   = get_field('title');
 
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?> overflow-hidden" style="<?php print $style; ?>">
+<section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?> overflow-hidden" style="<?php print $style; ?>">
     <?php print get_bg_parallax(); ?>
     <div class="container">
         <div class="grid grid-cols-12">
@@ -46,9 +46,14 @@ $title   = get_field('title');
                         <div class="swiper-wrapper">
                             <?php foreach ($blogs as $item): ?>
                                 <div class="swiper-slide mr-5 last:mr-0 h-auto min-h-[450px] md:min-h-[480px] w-[300px] md:w-[320px] lg:w-[340px] flex flex-col overflow-hidden" item-fade-animate>
-                                    <a href="<?php print get_permalink( $item->ID ); ?>">
+                                    <a href="<?php print get_permalink( $item->ID ); ?>" alt="<?php print $item->post_title; ?>">
                                         <div class="img-container overflow-hidden w-full h-[264px] md:h-[282px] lg:h-[300px]">
-                                            <img src="<?php print get_the_post_thumbnail_url( $item->ID ); ?>" alt="<?php print $item->post_title; ?>" class="object-cover transition-all duration-200 hover:scale-110">
+                                            <?php 
+                                                $thumbnail_id = get_post_thumbnail_id( $item->ID );
+                                                $alt_text = get_post_meta ( $thumbnail_id, '_wp_attachment_image_alt', true );
+                                                $alt_text = $alt_text ? $alt_text : $item->post_title; 
+                                            ?>
+                                            <img src="<?php print get_the_post_thumbnail_url( $item->ID ); ?>" alt="<?php print $alt_text; ?>" class="object-cover transition-all duration-200 hover:scale-110">
                                         </div>
                                         <div class="relative text-container grow z-10">
                                             <h4 class="text-[22px] md:text-[24px] lg:text-[26px] mb-[10px] text-blue"><?php print $item->post_title; ?></h4>
@@ -63,4 +68,4 @@ $title   = get_field('title');
             </div>
         </div>
     </div> 
-</div>
+</section>

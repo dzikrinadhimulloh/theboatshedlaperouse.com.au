@@ -31,7 +31,7 @@ $content = get_field('content');
 
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="<?php print $style; ?>">
+<section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="<?php print $style; ?>">
     <?php print get_bg_parallax(); ?>
     <div class="container">
         <div class="grid grid-cols-12">
@@ -40,7 +40,7 @@ $content = get_field('content');
                     <?php foreach ($content as $item): ?>
                         <div class="item flex flex-col md:flex-row mb-20 md:mb-[100px] lg:mb-[120px] last:mb-0 md:even:flex-row-reverse md:gap-x-12 lg:gap-x-20 items-center">
                             <div class="basis-full md:basis-1/2 mb-10 md:mb-0">
-                                <img src="<?php print $item['image']['url'] ?>" alt="<?php print $item['image']['alt_text']; ?>" item-fade-animate>
+                                <img src="<?php print $item['image']['url'] ?>" alt="<?php print get_alt_text($item['image']); ?>" item-fade-animate>
                             </div>
                             <div class="basis-full md:basis-1/2" item-fade-animate>
                                 <h2 class="mb-5"><?php print $item['title']; ?></h2>
@@ -57,4 +57,4 @@ $content = get_field('content');
             </div>
         </div>
     </div> 
-</div>
+</section>

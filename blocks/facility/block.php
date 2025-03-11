@@ -31,7 +31,7 @@ $facility  = get_field('facility', 'option');
 
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
+<section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>">
     <?php print get_bg_parallax(); ?>
     <div class="container">
         <div class="grid grid-cols-12 text-center">
@@ -47,4 +47,4 @@ $facility  = get_field('facility', 'option');
             </div>
         </div>
     </div> 
-</div>
+</section>

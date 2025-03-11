@@ -32,7 +32,7 @@ $right_content = get_field('right_content');
 
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="<?php print $style; ?>">
+<section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?>" style="<?php print $style; ?>">
     <?php print get_bg_parallax(); ?>
     <div class="container">
         <div class="grid grid-cols-12">
@@ -48,4 +48,4 @@ $right_content = get_field('right_content');
             </div>
         </div>
     </div> 
-</div>
+</section>

@@ -32,7 +32,7 @@ $images  = get_field('images');
 
 ?>
 
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?> overflow-hidden" style="<?php print $style; ?>">
+<section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?> overflow-hidden" style="<?php print $style; ?>">
     <?php print get_bg_parallax(); ?>
     <div class="container">
         <div class="grid grid-cols-12">
@@ -42,7 +42,7 @@ $images  = get_field('images');
                         <div class="swiper-wrapper">
                             <?php foreach ($images as $item): ?>
                                 <div class="swiper-slide mr-5 last:mr-0 aspect-[11/16] <?php print $type == 'large' ? 'w-[300px] md:w-[400px] lg:w-[440px] ' : 'w-[300px] md:w-[357px]'; ?>" item-fade-animate>
-                                    <img src="<?php print $item['url']; ?>" alt="<?php print $item['alt_text']; ?>" class="w-full h-full object-cover">
+                                    <img src="<?php print $item['url']; ?>" alt="<?php print get_alt_text($item); ?>" class="w-full h-full object-cover">
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -52,4 +52,4 @@ $images  = get_field('images');
             </div>
         </div>
     </div> 
-</div>
+</section>

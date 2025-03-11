@@ -62,3 +62,9 @@ function fetch_url($url) {
     curl_close($ch);
     return $data;
 }
+
+function get_alt_text($img) {
+    $alt_text = $img['alt'];
+    $alt_text = trim($alt_text) !== '' ? $alt_text : $img['title']; 
+    return $alt_text;
+}

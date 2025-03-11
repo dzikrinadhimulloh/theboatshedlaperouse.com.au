@@ -6,7 +6,7 @@ function shortcode_address($args = array(), $content = '') {
     $location_url = get_field('location_url', 'option');
 
     if ($type == 1) {
-        $location_url = $location_url ? ' <a href="'.$location_url.'">(Get Directions)</a>': ''; 
+        $location_url = $location_url ? ' <a href="'.$location_url.'" alt="Get directions">(Get Directions)</a>': ''; 
         $content = strip_tags($location).$location_url;
         $content = str_ireplace("<br>", "", $content);
 
@@ -39,7 +39,7 @@ function shortcode_phone($args = array(), $content = '') {
     $phone   = get_field('phone', 'option');
 
     if ($phone) {
-        return '<span class="telephone"><a href="tel:+'.$phone.'">'.$phone.'</a></span>';
+        return '<span class="telephone"><a href="tel:+'.$phone.'" alt="Telephone">'.$phone.'</a></span>';
     }
 }
 add_shortcode( 'phone', 'shortcode_phone' );
@@ -48,7 +48,7 @@ function shortcode_email($args = array(), $content = '') {
     $email   = get_field('email', 'option');
 
     if ($email) {
-        return '<span><a href="mailto:'.$email.'">'.$email.'</a></span>';
+        return '<span><a href="mailto:'.$email.'" alt="Email">'.$email.'</a></span>';
     }
 }
 add_shortcode( 'email', 'shortcode_email' );
@@ -66,7 +66,7 @@ function shortcode_button($args = array(), $content = '') {
         $icon = '<img class="ml-[10px]" src="'.assets_url('/dist/images/'.$icon.'.svg').'">';
     }
 
-    return '<a href="'.$href.'" class="button text-center '.$color.' '.$size.' '.$class.'" target="'.$target.'">'.$title.$icon.'</a>';
+    return '<a alt="Button" href="'.$href.'" class="button text-center '.$color.' '.$size.' '.$class.'" target="'.$target.'">'.$title.$icon.'</a>';
 }
 add_shortcode( 'button', 'shortcode_button' );
 

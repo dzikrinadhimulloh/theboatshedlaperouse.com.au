@@ -19,6 +19,7 @@
             "choices": {
                 "none": "None",
                 "pt-sm": "Small (100px)",
+                "pt-sm-alt": "Small Alt (110px)",
                 "pt-md": "Medium (140px)",
                 "pt-lg": "Large (200px)",
                 "pt-xl": "XLarge (300px)"
@@ -27,7 +28,6 @@
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
-            "allow_in_bindings": 0,
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
@@ -49,6 +49,7 @@
             "choices": {
                 "none": "None",
                 "pb-sm": "Small (100px)",
+                "pb-sm-alt": "Small Alt (110px)",
                 "pb-md": "Medium (140px)",
                 "pb-lg": "Large (200px)",
                 "pb-xl": "XLarge (300px)"
@@ -57,7 +58,6 @@
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
-            "allow_in_bindings": 0,
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
@@ -171,6 +171,33 @@
             "ui": 0,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_67cfc500d8257",
+            "label": "Fixed Background",
+            "name": "fixed_background",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67c67400f9689",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -191,5 +218,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741314201
+    "modified": 1741673846
 }

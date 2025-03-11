@@ -256,6 +256,10 @@ body {
   @apply pt-[100px];
 } 
 
+.pt-sm-alt {
+  @apply pt-[110px];
+} 
+
 .pt-md {
   @apply pt-[100px] md:pt-[120px] lg:pt-[140px];
 }
@@ -270,6 +274,10 @@ body {
 
 .pb-sm {
   @apply pb-[100px];
+} 
+
+.pb-sm-alt {
+  @apply pb-[110px];
 } 
 
 .pb-md {
@@ -296,6 +304,7 @@ body {
   }
 }
 
+.has-fixed-bg,
 .bc-transparent.has-parallax {
   @apply text-white;
 }
@@ -333,13 +342,18 @@ body {
   @apply bg-gray;
 }
 
-.background, .parallax-bg {
+.background:not(.has-fixed-bg), .parallax-bg {
   @apply bg-no-repeat bg-cover;
   background-image: var(--bg-url);
 }
 
 .acf-block.has-overlay {
   @apply bg-black/30 bg-blend-multiply;
+}
+
+.acf-block.has-fixed-bg {
+  background: var(--bg-url) fixed;
+  @apply bg-no-repeat bg-cover;
 }
 
 .acf-block:not(.has-overlay) {
@@ -356,5 +370,9 @@ body {
 }
 
 .parallax-bg {
-  @apply w-full h-[125%] absolute top-0 left-0 bg-black/40 z-[-1] bg-center;
+  @apply w-full h-[125%] absolute top-0 left-0 bg-black/40 z-[-1] bg-center bg-blend-multiply;
+}
+
+.fixed-bg {
+  @apply fixed top-0 left-0 w-full h-full z-[-1]; 
 }
