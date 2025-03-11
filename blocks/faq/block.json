@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/faq",
+  "title": "FAQ",
+  "icon": "editor-ul",
+  "description": "",
+  "category": "boatshed",
+  "keywords": ["faq"],
+  "_viewScript": ["blocks/faq"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  }
+}

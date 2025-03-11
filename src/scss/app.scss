@@ -375,3 +375,42 @@ body {
 .fixed-bg {
   @apply fixed top-0 left-0 w-full h-full z-[-1]; 
 }
+
+.custom-accordion {
+  .accordion-item {
+    .icon {
+      @apply block h-[30px] w-[30px];
+      background-image: url(./images/circle-plus.svg);
+    }
+    &.is-active {
+      .icon {
+        background-image: url(./images/circle-minus.svg);
+      } 
+
+      .accordion-title {
+        .icon {
+          &::before {
+            content: "\f0d8";
+          }
+        }
+      }
+      .accordion-content {
+        @apply mt-3;
+        height: var(--ac-height);
+      }
+    }
+
+    .accordion-content {
+      a {
+        //@apply no-underline;
+      }
+    }
+  }
+}
+
+.page-container {
+  @apply bg-no-repeat bg-cover;
+  background-image: var(--bg-template);
+  background-size: 100%; 
+  background-position: center 140px; 
+}

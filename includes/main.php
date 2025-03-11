@@ -68,3 +68,24 @@ function get_alt_text($img) {
     $alt_text = trim($alt_text) !== '' ? $alt_text : $img['title']; 
     return $alt_text;
 }
+
+
+add_filter('mce_buttons_2', 'mce_buttons_2');
+function mce_buttons_2($buttons) {
+    array_unshift($buttons, 'styleselect');
+    return $buttons;
+}
+
+add_filter('tiny_mce_before_init', 'tiny_mce_before_init');
+function tiny_mce_before_init($settings) {
+    $settings['theme_advanced_blockformats'] = 'p,h1,h2,h3,h4';
+
+    $style_formats = array(
+        array('title' => 'P2', 'inline' => 'span', 'classes' => 'p2'),
+        array('title' => 'P3', 'inline' => 'span', 'classes' => 'p3'),
+    );
+ 
+    $settings['style_formats'] = json_encode( $style_formats );
+
+    return $settings;
+}
