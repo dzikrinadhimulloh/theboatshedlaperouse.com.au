@@ -6,14 +6,14 @@ function shortcode_address($args = array(), $content = '') {
     $location_url = get_field('location_url', 'option');
 
     if ($type == 1) {
-        $location_url = $location_url ? ' <a href="'.$location_url.'" alt="Get directions">(Get Directions)</a>': ''; 
+        $location_url = $location_url ? ' <a href="'.$location_url.'" alt="Get directions" target="_blank">(Get Directions)</a>': ''; 
         $content = strip_tags($location).$location_url;
         $content = str_ireplace("<br>", "", $content);
 
         return '<span>'.$content.'</span>';
 
     } else {
-        $location_url = do_shortcode( '[button size="small mt-6" color="dark" class="alt" href="'.$location_url.'" title="Get Directions"]' );
+        $location_url = do_shortcode( '[button size="small mt-6" color="dark" class="alt" href="'.$location_url.'" target="_blank" title="Get Directions"]' );
         $content = apply_filters( 'the_content', $location).'<p>'.$location_url.'</p>';
 
         return $content;
