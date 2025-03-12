@@ -3,6 +3,7 @@
   "apiVersion": 3,
   "name": "acf/column-text",
   "title": "2 Column Text",
+  "icon": "media-spreadsheet",
   "description": "",
   "category": "boatshed",
   "keywords": ["column-text"],

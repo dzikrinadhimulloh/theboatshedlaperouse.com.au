@@ -3,6 +3,7 @@
   "apiVersion": 3,
   "name": "acf/text-image",
   "title": "Text Image",
+  "icon": "id-alt",
   "description": "",
   "category": "boatshed",
   "keywords": ["text-image"],

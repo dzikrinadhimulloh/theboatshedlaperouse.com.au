@@ -3,6 +3,7 @@
   "apiVersion": 3,
   "name": "acf/facility",
   "title": "Facility",
+  "icon": "bank",
   "description": "",
   "category": "boatshed",
   "keywords": ["facility"],

@@ -3,6 +3,7 @@
   "apiVersion": 3,
   "name": "acf/image-masonry",
   "title": "Image Masonry",
+  "icon": "schedule",
   "description": "",
   "category": "boatshed",
   "keywords": ["image-masonry"],

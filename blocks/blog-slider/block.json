@@ -3,6 +3,7 @@
   "apiVersion": 3,
   "name": "acf/blog-slider",
   "title": "Blog Slider",
+  "icon": "slides",
   "description": "",
   "category": "boatshed",
   "keywords": ["blog-slider"],

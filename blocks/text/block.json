@@ -3,6 +3,7 @@
   "apiVersion": 3,
   "name": "acf/text",
   "title": "Text",
+  "icon": "media-text",
   "description": "",
   "category": "boatshed",
   "keywords": ["text"],

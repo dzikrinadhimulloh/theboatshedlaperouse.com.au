@@ -3,6 +3,7 @@
   "apiVersion": 3,
   "name": "acf/slider",
   "title": "Slider",
+  "icon": "format-gallery",
   "description": "",
   "category": "boatshed",
   "keywords": ["slider"],
