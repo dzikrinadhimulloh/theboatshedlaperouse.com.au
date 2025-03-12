@@ -13,7 +13,7 @@ function shortcode_address($args = array(), $content = '') {
         return '<span>'.$content.'</span>';
 
     } else {
-        $location_url = do_shortcode( '[button size="small mt-6" color="dark" href="'.$location_url.'" title="Get Directions"]' );
+        $location_url = do_shortcode( '[button size="small mt-6" color="dark" class="alt" href="'.$location_url.'" title="Get Directions"]' );
         $content = apply_filters( 'the_content', $location).'<p>'.$location_url.'</p>';
 
         return $content;
@@ -23,13 +23,21 @@ add_shortcode( 'address', 'shortcode_address' );
 
 
 function shortcode_trading_hours($args = array(), $content = '') {
-    $trading_hours = get_field('trading_hours', 'option');
+    $type           = $args['type'] ?? 1;
+    $trading_hours  = get_field('trading_hours', 'option');
+    $note           = get_field('trading_hours_note', 'option');
+    $note           = str_replace(['<p>', '</p>'], '', $note);
 
-    $content = wp_strip_all_tags($trading_hours);
-    $content = str_ireplace("&nbsp;", '<br class="spacing block md:hidden">', $content);
+    if ($type == 1) {
+        $content = wp_strip_all_tags($trading_hours);
+        $content = str_ireplace("&nbsp;", '<br class="spacing block md:hidden">', $content);
 
-    if ($content) {
         return '<span>'.$content.'</span>';
+    } else {
+        $content  = apply_filters( 'the_content', $trading_hours);
+        $content .= '<div>'.$note.'</div>';
+
+        return $content;
     }
 }
 add_shortcode( 'trading-hours', 'shortcode_trading_hours' );

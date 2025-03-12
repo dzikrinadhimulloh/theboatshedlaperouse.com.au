@@ -85,6 +85,9 @@ function tiny_mce_before_init($settings) {
     $style_formats = array(
         array('title' => 'P2', 'inline' => 'span', 'classes' => 'p2'),
         array('title' => 'P3', 'inline' => 'span', 'classes' => 'p3'),
+        array('title' => 'Button Text Size 1', 'inline' => 'span', 'classes' => 'btn-text-1'),
+        array('title' => 'Button Text Size 2', 'inline' => 'span', 'classes' => 'btn-text-2'),
+        array('title' => 'Button Text Size 3', 'inline' => 'span', 'classes' => 'btn-text-3'),
     );
  
     $settings['style_formats'] = json_encode( $style_formats );

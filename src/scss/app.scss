@@ -205,6 +205,9 @@ footer {
 
   &.small {
     @apply font-sans-alt leading-5 btn-text-3 text-navy py-[9px] px-[30px] uppercase;
+    &.alt {
+      @apply font-sans normal-case btn-text-2 leading-[12px] px-4;
+    }
   }
 
   &.dark {
@@ -353,6 +356,7 @@ body {
 
 .acf-block.has-fixed-bg {
   background-attachment: fixed;
+  background-position: center;
 }
 
 .acf-block:not(.has-overlay) {
@@ -415,25 +419,12 @@ body {
   background-position: center 140px; 
 }
 
-.grid-masonry {
-  .grid-item:nth-child(odd) {
-    img {
-      @apply justify-self-end;
-    }
-  }
-
-  &.right {
-    .grid-item:nth-child(2) {
-      @apply md:mt-[150px] lg:mt-[220px];
-    }
-  }
-  &.left {
-    .grid-item:nth-child(1) {
-      @apply md:mt-[150px] lg:mt-[220px];
-    }
-  }
-}
-
 [item-fade-animate] {
   @apply opacity-0;
+}
+
+.part-contact {
+  h6 {
+    @apply mb-0;
+  }
 }

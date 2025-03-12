@@ -14,11 +14,31 @@
 
 @font-face {
   font-family: 'Graphik';
+  src: url('./fonts/graphik/GraphikRegularItalic.otf') format('opentype');
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Graphik';
   src: url('./fonts/graphik/GraphikMedium.otf') format('opentype');
   font-style: normal;
   font-weight: 500;
 }
 
+@font-face {
+  font-family: 'Graphik';
+  src: url('./fonts/graphik/GraphikSemibold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 600;
+}
+
+// @font-face {
+//   font-family: 'Graphik';
+//   src: url('./fonts/graphik/GraphikBold.otf') format('opentype');
+//   font-style: normal;
+//   font-weight: 700;
+// }
 
 @font-face {
   font-family: 'Nib Pro';
