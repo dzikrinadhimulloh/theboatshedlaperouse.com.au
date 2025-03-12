@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_67d10deae77d9",
-            "label": "Start From",
-            "name": "start_from",
+            "label": "Spacing At",
+            "name": "spacing_at",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -75,5 +75,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741754038
+    "modified": 1741758215
 }

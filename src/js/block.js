@@ -88,10 +88,13 @@ export default class Block {
         self.accordionInit();
         self.masonry();
 
-        
         $(window).on('resize', function() {
             self.masonry();
-
         });
+
+        // fix masonry after few second
+        setTimeout(() => {
+            self.masonry();            
+        }, 5000);
     }
 }

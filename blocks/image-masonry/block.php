@@ -28,7 +28,7 @@ if ( ! empty( $block['align'] ) ) {
 $classes .= get_global_block_classes();
 $style   = get_global_block_bg();
 $content = get_field('content');
-$start_from = get_field('start_from');
+$spacing_at = get_field('spacing_at');
 
 ?>
 
@@ -38,7 +38,7 @@ $start_from = get_field('start_from');
         <div class="grid grid-cols-12">
             <div class="col-span-12 lg:col-span-10 lg:col-start-2">
                 <div class="flex justify-center">
-                    <div class="grid-masonry flex flex-wrap w-full lg:w-[80%] m-auto max-w-[1080px] <?php print $start_from; ?>">
+                    <div class="grid-masonry flex flex-wrap w-full lg:w-[80%] m-auto max-w-[1080px] <?php print $spacing_at; ?>">
                         <?php foreach ($content as $item): ?>
                             <div class="grid-item w-full md:w-[48%] mb-[20px] xl:mb-[30px]" item-fade-animate>
                                 <img src="<?php print $item['url'] ?>" alt="<?php print get_alt_text($item); ?>" class="w-full lg:w-auto">
