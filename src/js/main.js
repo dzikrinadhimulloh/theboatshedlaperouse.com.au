@@ -98,9 +98,9 @@ export default class Block {
                     ease: "none",
                     delay: seq * 0.3,
                     scrollTrigger: {
-                    trigger: el, 
-                    start: "top 85%",
-                    end: "bottom top",
+                        trigger: el, 
+                        start: "top 85%",
+                        end: "bottom top",
                     }
                 });
                 seq++;
@@ -108,19 +108,22 @@ export default class Block {
         });
         
         /*
-        gsap.utils.toArray(".bg-fixed").forEach((el) => {
-            gsap.to(el, {
-                backgroundPosition: "center top",
-                ease: "none",
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: true,
-                    markers: true
-                }
+        gsap.utils.toArray(".fixed-bg").forEach((el) => {
+            ScrollTrigger.create({
+                trigger: el,
+                start: "top top", 
+                pin: true,
+                pinSpacing: false,
+                markers: true
             });
         });*/
+
+
+        function updateBackground() {
+            document.querySelector('.fixed-bg').style.top = `${window.scrollY - $('.fixed-bg').parent().offset().top}px`;
+        }
+
+        window.addEventListener('scroll', updateBackground);
     }
 
     globals(){      
