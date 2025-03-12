@@ -106,12 +106,25 @@ export default class Block {
                 seq++;
             });
         });
+        /*
+        gsap.utils.toArray(".bg-fixed").forEach((el) => {
+            gsap.to(el, {
+                backgroundPosition: "center top",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        });*/
     }
 
     globals(){      
         var globalW = $(window).width(); 
         var globalH = $(window).height(); 
-        
+
         var headroom  = new Headroom($('header').get(0));
         headroom.init();
       

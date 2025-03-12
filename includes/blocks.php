@@ -82,7 +82,10 @@ function get_global_block_bg() {
 
 function get_bg_parallax() {
     $parallax = get_field('parallax') ?? false; 
+    $fixed    = get_field('fixed_background') ?? false;
     if ($parallax) {
         return '<div class="parallax-outer"><div class="parallax-bg"></div></div>';
+    } else if ($fixed) {
+        return '<div class="bg-fixed"></div>';
     }
 }
