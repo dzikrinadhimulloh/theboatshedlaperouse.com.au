@@ -356,6 +356,7 @@ body {
 
 .fixed-bg {
   @apply w-screen h-lvh;
+  @apply bg-black/30 bg-blend-multiply;
 }
 
 // .bg-fixed::before {
