@@ -345,7 +345,7 @@ body {
   @apply bg-gray;
 }
 
-.background:not(.has-fixed-bg), .parallax-bg {
+.background:not(.has-fixed-bg), .parallax-bg, .fixed-bg {
   @apply bg-no-repeat bg-cover;
   background-image: var(--bg-url);
 }
@@ -354,18 +354,17 @@ body {
   @apply bg-black/30 bg-blend-multiply;
 }
 
-.bg-fixed {
-  @apply relative overflow-hidden;
+.fixed-bg {
+  @apply w-screen h-lvh;
 }
 
-.bg-fixed::before {
-  @apply fixed top-0 left-0 w-screen h-lvh z-[-1] content-[""];
-  background: var(--bg-url) center/cover no-repeat;
-}
+// .bg-fixed::before {
+//   @apply fixed top-0 left-0 w-screen h-lvh z-[-1] content-[""];
+//   background: var(--bg-url) center/cover no-repeat;
+// }
 
 .acf-block.has-fixed-bg {
-  // background-attachment: fixed;
-  // background-position: center;
+
 }
 
 .acf-block:not(.has-overlay) {
@@ -386,7 +385,7 @@ body {
 }
 
 .fixed-bg {
-  @apply fixed top-0 left-0 w-full h-full z-[-1]; 
+  @apply absolute top-0 left-0 w-full h-full z-[-1]; 
 }
 
 .custom-accordion {

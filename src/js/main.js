@@ -106,6 +106,7 @@ export default class Block {
                 seq++;
             });
         });
+        
         /*
         gsap.utils.toArray(".bg-fixed").forEach((el) => {
             gsap.to(el, {
@@ -115,7 +116,8 @@ export default class Block {
                     trigger: el,
                     start: "top bottom",
                     end: "bottom top",
-                    scrub: true
+                    scrub: true,
+                    markers: true
                 }
             });
         });*/

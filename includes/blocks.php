@@ -86,6 +86,6 @@ function get_bg_parallax() {
     if ($parallax) {
         return '<div class="parallax-outer"><div class="parallax-bg"></div></div>';
     } else if ($fixed) {
-        return '<div class="bg-fixed"></div>';
+        return '<div class="fixed-bg"></div>';
     }
 }
