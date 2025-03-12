@@ -414,3 +414,26 @@ body {
   background-size: 100%; 
   background-position: center 140px; 
 }
+
+.grid-masonry {
+  .grid-item:nth-child(odd) {
+    img {
+      @apply justify-self-end;
+    }
+  }
+
+  &.left {
+    .grid-item:nth-child(2) {
+      @apply md:mt-[150px] lg:mt-[220px];
+    }
+  }
+  &.right {
+    .grid-item:nth-child(1) {
+      @apply md:mt-[150px] lg:mt-[220px];
+    }
+  }
+}
+
+[item-fade-animate] {
+  @apply opacity-0;
+}

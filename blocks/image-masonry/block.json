@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/image-masonry",
+  "title": "Image Masonry",
+  "description": "",
+  "category": "boatshed",
+  "keywords": ["image-masonry"],
+  "_viewScript": ["blocks/image-masonry"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  }
+}

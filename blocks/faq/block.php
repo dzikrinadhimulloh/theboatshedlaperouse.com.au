@@ -35,15 +35,15 @@ $title      = get_field('title');
 <section id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $classes ); ?> overflow-hidden" style="<?php print $style; ?>">
     <?php print get_bg_parallax(); ?>
     <div class="container">
-        <div class="grid grid-cols-12" item-fade-animate>
-            <div class="col-span-12 md:col-start-2 md:col-span-10 xl:col-start-3 xl:col-span-8">
+        <div class="grid grid-cols-12">
+            <div class="col-span-12 lg:col-start-2 lg:col-span-10 xl:col-start-3 xl:col-span-8">
                 <?php if ($title) : ?>
                     <h2 class="mb-6 md:mb-10"><?php print $title; ?></h2>
                 <?php endif; ?>
                 <?php if ($contents) : ?>
                     <div class="custom-accordion">
                         <?php foreach($contents as $key => $val) : ?>
-                            <div class="accordion-item relative p-4 md:py-5 md:px-[30px] rounded-xl overflow-hidden last-of-type:mb-0 mb-[10px] bg-gray">
+                            <div class="accordion-item relative p-4 md:py-5 md:px-[30px] rounded-xl overflow-hidden last-of-type:mb-0 mb-[10px] bg-gray" item-fade-animate>
                                 <div class="accordion-title cursor-pointer flex items-center justify-between">
                                     <p class="text-black font-medium"><?php print $val['title']; ?></p>
                                     <div class="icon basis-auto grow-0 shrink-0"></div>

@@ -2,7 +2,7 @@
 
 define('CUSTOM_BLOCKS', [
     'page' => [
-        'text', 'column-text', 'facility', 'text-image', 'slider', 'blog-slider', 'faq'
+        'text', 'column-text', 'facility', 'text-image', 'slider', 'blog-slider', 'faq', 'image-masonry'
     ],
     'post' => [
         //'text', 'column-text', 'facility', 'text-image', 'slider'

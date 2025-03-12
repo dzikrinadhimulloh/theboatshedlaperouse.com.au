@@ -68,8 +68,30 @@ export default class Block {
         }
     }
 
+    masonry() {
+        $('.grid-masonry').each(function(){
+            
+        var gutterSize = window.innerWidth > 1440 ? 30 :
+                        window.innerWidth > 630 ? 20 : 20;
+                        
+            $(this).masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+                gutter: gutterSize,
+                percentPosition: true
+            });
+        }) 
+    }
+
     init() {
         var self = this;
         self.accordionInit();
+        self.masonry();
+
+        
+        $(window).on('resize', function() {
+            self.masonry();
+
+        });
     }
 }
