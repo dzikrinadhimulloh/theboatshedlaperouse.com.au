@@ -41,7 +41,7 @@ $spacing_at = get_field('spacing_at');
                     <div class="grid-masonry flex flex-wrap w-full lg:w-[80%] m-auto max-w-[1080px] <?php print $spacing_at; ?>">
                         <?php foreach ($content as $key => $item): ?>
                             <?php if ((($spacing_at == 'left') && ($key+1 == 1)))  : ?>
-                                <div class="grid-item blank-space opacity-0 w-full md:w-[48%] mb-[20px] xl:mb-[30px]">
+                                <div class="grid-item hidden md:block blank-space opacity-0 w-full md:w-[48%] mb-[20px] xl:mb-[30px]">
                                     <img src="<?php print $item['url'] ?>" alt="<?php print get_alt_text($item); ?>" class="w-full lg:w-auto">    
                                 </div>
                             <?php endif; ?>
