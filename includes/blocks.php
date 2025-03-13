@@ -77,7 +77,10 @@ function get_global_block_classes() {
 }
 
 function get_global_block_bg() {
-    return ($bgImg = get_field('background_image')) ? '--bg-url:url('.$bgImg['url'].')' : ''; 
+    $bg[] = ($bgImg = get_field('background_image')) ? '--bg-url:url('.$bgImg['url'].')' : ''; 
+    $bg[] = ($bgImgM = get_field('background_image_mobile')) ? '--bg-mob-url:url('.$bgImgM['url'].')' : '--bg-mob-url:url('.$bgImg['url'].')'; 
+
+    return implode(';', $bg);
 }
 
 function get_bg_parallax() {
