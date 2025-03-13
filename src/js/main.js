@@ -120,7 +120,9 @@ export default class Block {
 
 
         function updateBackground() {
-            document.querySelector('.fixed-bg').style.top = `${window.scrollY - $('.fixed-bg').parent().offset().top}px`;
+            $('.fixed-bg').each(function(){
+                this.style.top = `${window.scrollY - $(this).parent().offset().top}px`;
+            })
         }
 
         window.addEventListener('scroll', updateBackground);

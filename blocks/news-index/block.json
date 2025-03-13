@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/news-index",
+  "title": "News Index",
+  "icon": "welcome-widgets-menus",
+  "description": "",
+  "category": "boatshed",
+  "keywords": ["news-index"],
+  "_viewScript": ["blocks/news-index"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "block.php"
+  }
+}
