@@ -2,19 +2,31 @@
     .grid-masonry {
         .grid-item:nth-child(odd) {
             img {
-                @apply justify-self-end;
+                @apply justify-self-end md:ml-auto;
+            }
+        }
+        .grid-item:nth-child(even) {
+            img {
+                @apply md:mr-auto;
             }
         }
     
+        .blank-space {
+            @apply md:h-[150px] lg:h-[220px];
+        }
+        
         &.right {
             .grid-item:nth-child(2) {
                 @apply md:mt-[150px] lg:mt-[220px];
             }
         }
+
+        /*
+       
         &.left {
             .grid-item:nth-child(1) {
                 @apply md:mt-[150px] lg:mt-[220px];
             }
-        }
+        }*/
     }
 }

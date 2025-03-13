@@ -39,7 +39,12 @@ $spacing_at = get_field('spacing_at');
             <div class="col-span-12 lg:col-span-10 lg:col-start-2">
                 <div class="flex justify-center">
                     <div class="grid-masonry flex flex-wrap w-full lg:w-[80%] m-auto max-w-[1080px] <?php print $spacing_at; ?>">
-                        <?php foreach ($content as $item): ?>
+                        <?php foreach ($content as $key => $item): ?>
+                            <?php if ((($spacing_at == 'left') && ($key+1 == 1)))  : ?>
+                                <div class="grid-item blank-space opacity-0 w-full md:w-[48%] mb-[20px] xl:mb-[30px]">
+                                    <img src="<?php print $item['url'] ?>" alt="<?php print get_alt_text($item); ?>" class="w-full lg:w-auto">    
+                                </div>
+                            <?php endif; ?>
                             <div class="grid-item w-full md:w-[48%] mb-[20px] xl:mb-[30px]" item-fade-animate>
                                 <img src="<?php print $item['url'] ?>" alt="<?php print get_alt_text($item); ?>" class="w-full lg:w-auto">
                             </div>
