@@ -1,1 +1,25 @@
-.block-news-index {}
+.block-news-index {
+
+    .blog-index-container {
+        @apply transition-all duration-300;
+
+        &.disabled {
+            @apply opacity-65;
+        }
+
+        .item-cat {
+            &.active {
+                @apply font-bold;
+            }
+        }
+    }
+
+    .blog-index-paging {
+        * {
+            @apply text-black;  
+        }
+        .page-no.active {
+            @apply font-bold;
+        }
+    }
+}

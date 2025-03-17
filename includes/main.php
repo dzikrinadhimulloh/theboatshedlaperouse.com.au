@@ -1,4 +1,6 @@
 <?php
+define( 'POST_PER_PAGE', 4);
+
 /**
  * Add theme support
  */
@@ -71,6 +73,11 @@ function get_alt_text($img) {
     return $alt_text;
 }
 
+function get_blog_thumb_alt_text($post) {
+    $thumbnail_id = get_post_thumbnail_id( $post->ID );
+    $alt_text = get_post_meta ( $thumbnail_id, '_wp_attachment_image_alt', true );
+    return $alt_text ? $alt_text : $post->post_title; 
+}
 
 add_filter('mce_buttons_2', 'mce_buttons_2');
 function mce_buttons_2($buttons) {
@@ -93,4 +100,26 @@ function tiny_mce_before_init($settings) {
     $settings['style_formats'] = json_encode( $style_formats );
 
     return $settings;
+}
+
+
+function get_blog_data($page = 1, $category = 0) {
+    $args = array(
+        'post_type'     => 'post',
+        'post_status'   => 'publish',
+        'posts_per_page' => POST_PER_PAGE,
+        'paged'         => $page,
+        'orderby'       => 'date',
+        'order'         => 'DESC'
+    );
+
+    if ($category > 0) {
+        $args['tax_query'][] = [
+            'taxonomy'  => 'category',
+            'terms'     => $category,
+            'field'     => 'term_id',
+        ];
+    }
+
+    return new WP_Query($args);
 }

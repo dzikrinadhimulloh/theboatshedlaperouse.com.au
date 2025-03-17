@@ -3,9 +3,11 @@
     $booking_url  = get_field('booking_url', 'option');
     $dine_in_menu = get_field('dine_in_menu', 'option');
     $set_menu     = get_field('set_menu', 'option');
+
+    $classes      = (is_single() || is_privacy_policy()) ? 'dark' : '';
 ?>  
 
-<header class="headroom fixed top-0 left-0 right-0 flex items-center justify-between py-[13px] md:py-5 px-5 md:px-[30px]">
+<header class="headroom fixed top-0 left-0 right-0 flex items-center justify-between py-[13px] md:py-5 px-5 md:px-[30px] <?php print $classes; ?>">
     <div class="basis-1/3 menu order-3 lg:order-1 text-right lg:text-left">
         <a href="#open-menu" class="btn-menu inline-block" alt="Open Menu">
             <span></span>

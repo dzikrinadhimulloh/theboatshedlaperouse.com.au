@@ -18,6 +18,7 @@
             },
             "choices": {
                 "none": "None",
+                "pt-xsm": "XSmall (60px)",
                 "pt-sm": "Small (100px)",
                 "pt-sm-alt": "Small Alt (110px)",
                 "pt-md": "Medium (140px)",
@@ -48,6 +49,7 @@
             },
             "choices": {
                 "none": "None",
+                "pb-xsm": "XSmall (60px)",
                 "pb-sm": "Small (100px)",
                 "pb-sm-alt": "Small Alt (110px)",
                 "pb-md": "Medium (140px)",
@@ -243,5 +245,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741846324
+    "modified": 1742187883
 }

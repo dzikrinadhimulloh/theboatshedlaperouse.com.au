@@ -24,6 +24,22 @@
             "append": ""
         },
         {
+            "key": "field_67d7aaf06785f",
+            "label": "Link",
+            "name": "link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_67c818abbb34b",
             "label": "Type",
             "name": "type",
@@ -98,5 +114,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1741168121
+    "modified": 1742187267
 }

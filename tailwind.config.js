@@ -48,6 +48,7 @@ module.exports = {
     './footer.php',
     './header.php',
     './index.php',
+    './single-post.php',
     './includes/shortcodes.php',
     './parts/*.php',
     './parts/**/*.php',

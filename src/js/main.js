@@ -141,8 +141,9 @@ export default class Block {
       
         function get_global_variable() {
           $('html').css('--scrollbar-size', $(window).outerWidth() - $(window).width()+'px');
-          $('html').css('--window-height', globalH);
-          $('html').css('--parallax-height', globalH * 1.4);
+          $('html').css('--window-height', globalH+'px');
+          $('html').css('--parallax-height', (globalH * 1.4)+'px');
+          $('html').css('--header-height', $('header').outerHeight()+'px');
         }
       
         get_global_variable();

@@ -6,6 +6,7 @@
 @import 'fonts';
 @import 'typography';
 @import 'blocks/index';
+@import 'templates/index';
 
 .disable-scroll {
   @apply overflow-y-hidden;
@@ -77,11 +78,18 @@ header {
     }
   }
 
+  &.dark {
+    @apply bg-dark-blue;
+    .button.dark {
+      @apply border-white;
+    }
+  }
+
   &.headroom--unpinned {
     @apply -top-[125px];
   }
 
-  &.headroom--pinned:not(.headroom--top) {
+  &.headroom--pinned:not(.headroom--top):not(.dark) {
     @apply bg-white text-blue;
 
     .logo a svg * {
@@ -255,6 +263,10 @@ body {
 }
 
 // for block padding
+.pt-xsm {
+  @apply pt-[60px];
+}
+
 .pt-sm {
   @apply pt-[100px];
 } 
@@ -273,6 +285,10 @@ body {
 
 .pt-xl {
   @apply pt-[192px] md:pt-[336px] lg:pt-[300px];
+}
+
+.pb-xsm {
+  @apply pt-[60px];
 }
 
 .pb-sm {

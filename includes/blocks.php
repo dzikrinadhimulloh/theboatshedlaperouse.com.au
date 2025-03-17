@@ -2,18 +2,18 @@
 
 define('CUSTOM_BLOCKS', [
     'page' => [
-        'text', 'column-text', 'facility', 'text-image', 'slider', 'blog-slider', 'faq', 'image-masonry', 'contact'
+        'text', 'column-text', 'facility', 'text-image', 'slider', 'blog-slider', 'faq', 'image-masonry', 'contact', 'news-index'
     ],
     'post' => [
-        //'text', 'column-text', 'facility', 'text-image', 'slider'
+        'text', 'column-text', 'facility', 'text-image', 'slider', 'blog-slider', 'faq', 'image-masonry', 'contact', 'news-index'
     ],
 ]);
 
 $allowed_core_blocks = [
     // Add allowed core blocks here
     'post' => [
-        'core/paragraph',
-        'core/freeform',
+        //'core/paragraph',
+        //'core/freeform',
     ],
 ];
 
