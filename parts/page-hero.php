@@ -29,7 +29,7 @@
             <div class="grid grid-cols-12">
                 <div class="col-span-12 lg:col-span-10 lg:col-start-2 2xl:col-span-8 2xl:col-start-3">
                     <?php if (is_single()): ?>
-                        <div class="flex justify-between flex-col md:flex-row text-black items-baseline ">
+                        <div class="flex justify-between flex-col md:flex-row text-black items-baseline mb-10">
                             <div class="left flex justify-between w-full md:w-fit">
                                 <?php
                                     $terms = wp_get_post_terms( get_the_id(), 'category' );
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                     <?php endif; ?>
-                    <h2 class="mt-10 mb-0 ">
+                    <h2 class="my-0">
                         <?php the_title(); ?>
                     </h2>
                 </div>

@@ -72,10 +72,12 @@
     }
   }
 
-  ul li {
-    @apply relative pl-7;
-    &::before {
-      @apply absolute content-[""] w-1 h-1 bg-[#616161] rounded block left-[13px] top-3 -translate-y-1/2;
+  .acf-block.block-text {
+    ul li {
+      @apply relative pl-7;
+      &::before {
+        @apply absolute content-[""] w-1 h-1 bg-[#616161] rounded block left-[13px] top-3 -translate-y-1/2;
+      }
     }
   }
   
