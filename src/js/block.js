@@ -136,11 +136,11 @@ export default class Block {
         var self = this;
         var $itemCont = $parent.find('.blog-item-container');
         var $itemContPaging = $parent.find('.blog-index-paging');
-        console.log(window.location.origin + "/wp-admin/admin-ajax.php");
+        console.log(AdminAjax);
         
         $.ajax({
             type: 'post',
-            url: window.location.origin + "/wp-admin/admin-ajax.php",
+            url: AdminAjax,
             data: {
                 action: 'load_blog_directory',
                 page: page,

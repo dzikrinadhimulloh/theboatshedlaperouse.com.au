@@ -11,6 +11,10 @@
     <?php wp_head(); ?>
 </head>
 
+<script>
+    AdminAjax = "<?php print admin_url( 'admin-ajax.php' ); ?>"
+</script>
+
 <body <?php body_class('antialiased'); ?>>
     
 <?php get_template_part('parts/top'); ?>
