@@ -1,6 +1,6 @@
 <?php
 
-function load_blog_directory() {
+function tbs_load_blog_directory() {
 	$page     = $_POST['page'];
 	$category = $_POST['category'];
 	$paging_content = '';
@@ -12,7 +12,7 @@ function load_blog_directory() {
     ] );
     $content = ob_get_contents();
 	ob_end_clean();
-	
+
 	$total_page = ceil($blogs->found_posts/POST_PER_PAGE);
 
 	if ($total_page > 1) { 
@@ -34,8 +34,8 @@ function load_blog_directory() {
 	print wp_send_json( $data );
 	wp_die();
 }
-add_action( 'wp_ajax_load_blog_directory', 'load_blog_directory' );
-add_action( 'wp_ajax_nopriv_load_blog_directory', 'load_blog_directory' );
+add_action( 'wp_ajax_load_blog_directory', 'tbs_load_blog_directory' );
+add_action( 'wp_ajax_nopriv_load_blog_directory', 'tbs_load_blog_directory' );
 
 
 function load_blog_paging() {

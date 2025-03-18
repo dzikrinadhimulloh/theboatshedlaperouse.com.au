@@ -149,6 +149,7 @@ export default class Block {
                 $parent.addClass('disabled');
             },  
             success: function(response) {
+                console.log(response);
                 $itemCont.html(response['html']);
                 $parent.data('current-page', page);
                 $parent.data('cat', category);
@@ -162,6 +163,9 @@ export default class Block {
                 $('html, body').animate({
                     scrollTop: $itemCont.offset().top - 200
                 }, 400);
+            },
+            error: function(xhr, status, error) {
+                console.log("AJAX Error:", status, error);
             }
         })
     }
