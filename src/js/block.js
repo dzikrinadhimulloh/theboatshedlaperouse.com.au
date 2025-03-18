@@ -136,7 +136,6 @@ export default class Block {
         var self = this;
         var $itemCont = $parent.find('.blog-item-container');
         var $itemContPaging = $parent.find('.blog-index-paging');
-        console.log(AdminAjax);
         
         $.ajax({
             type: 'post',
@@ -150,7 +149,6 @@ export default class Block {
                 $parent.addClass('disabled');
             },  
             success: function(response) {
-                console.log(response);
                 $itemCont.html(response['html']);
                 $parent.data('current-page', page);
                 $parent.data('cat', category);

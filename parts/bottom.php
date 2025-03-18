@@ -56,7 +56,7 @@
             </div>
             <div class="bottom-container border-t border-metal pt-10">
                 <div class="flex text-center items-center flex-col md:flex-row md:justify-between ">
-                    <p class="p3 mb-3 md:mb-0">© Copyright <?php print date('Y')?>. The Boatshed Restaurants. <a href="<?php home_url( '/privacy-policy' )?>" alt="Privacy Policy">Privacy Policy</a>.</p>
+                    <p class="p3 mb-3 md:mb-0">© Copyright <?php print date('Y')?>. The Boatshed Restaurants. <a href="<?php print home_url( '/privacy-policy' )?>" alt="Privacy Policy">Privacy Policy</a>.</p>
                     <p class="p3"><a href="https://pictura.digital/" target="_new" alt="Website Design Sydney">Website Design Sydney</a></p>
                 </div>
             </div>
