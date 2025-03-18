@@ -24,7 +24,7 @@
         </div>
     </section>
 <?php else: ?>
-    <section class="bg-[#F8F8F8] pt-[120px] pb-[60px] mt-[var(--header-height)]">
+    <section class="bg-[#F8F8F8] pt-[60px] md:pt-[120px] pb-[60px] mt-[var(--header-height)]">
         <div class="container">
             <div class="grid grid-cols-12">
                 <div class="col-span-12 lg:col-span-10 lg:col-start-2 2xl:col-span-8 2xl:col-start-3">
@@ -40,7 +40,7 @@
                                 <p class="btn-text-2 mr-[30px]" ><?php print $terms_text; ?></p>
                                 <p class="btn-text-2 text-black"><?php print get_the_date( 'd M Y', $item ); ?></p>
                             </div>
-                            <div class="right flex">
+                            <div class="right flex w-full mt-2 md:mt-0 md:w-auto justify-end">
                                 <a href="https://www.facebook.com/sharer/sharer.php?u=<?php print get_permalink( get_the_ID() ); ?>" target="_blank" class=" mr-[30px]">
                                     <img src="<?php print assets_url('/dist/images/icon-facebook.svg')?>" alt="Facebook">
                                 </a>
