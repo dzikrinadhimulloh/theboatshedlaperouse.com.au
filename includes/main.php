@@ -29,6 +29,7 @@ add_action('after_setup_theme', function () {
  * Enqueue script and styles
  */
 add_action('wp_enqueue_scripts', function () {
+    //wp_localize_script( 'app',  'myAjax', array( 'ajax_url' => admin_url( 'admin-ajax.php' )));
     wp_enqueue_script('headroom-js', 'https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js', array(), null, true);
     wp_enqueue_script('swiper-bundle', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
     wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', array(), null, true);
@@ -36,7 +37,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array(), null, true);
     wp_enqueue_style('swiper-bundle-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', [], null);
     
-
     wp_enqueue_style('app', assets_url('/dist/app.css'), [], null);
     wp_enqueue_script('app', assets_url('/dist/app.js'), ['jquery'], null, true);
 
