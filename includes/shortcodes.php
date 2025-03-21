@@ -71,7 +71,7 @@ function shortcode_button($args = array(), $content = '') {
     $target      = $args['target'] ?? '';
     
     if ($icon) { 
-        $icon = '<img class="ml-[10px]" src="'.assets_url('/dist/images/'.$icon.'.svg').'">';
+        $icon = '<img alt="button arrow" class="ml-[10px]" src="'.assets_url('/dist/images/'.$icon.'.svg').'">';
     }
 
     return '<a alt="Button" href="'.$href.'" class="button text-center '.$color.' '.$size.' '.$class.'" target="'.$target.'">'.$title.$icon.'</a>';

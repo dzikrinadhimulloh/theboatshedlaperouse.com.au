@@ -1,5 +1,5 @@
 <?php
-define( 'POST_PER_PAGE', 4);
+define( 'POST_PER_PAGE', 10);
 
 /**
  * Add theme support
