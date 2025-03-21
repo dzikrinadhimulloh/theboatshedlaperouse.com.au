@@ -31,6 +31,10 @@ export default class Block {
             show_panel($menuPanel);
         })
 
+        if (window.location.hash == '#menu') {
+            $($('a[href="#open-menu-links"]').get(0)).click();
+        }
+        
         $(document).on('click', '[href="#close-menu"]', function(e){
             e.preventDefault();
             var $menuPanel = $('.menu-panel');
@@ -151,7 +155,7 @@ export default class Block {
           if (globalW !== $(window).width()) {
             get_global_variable();
           }
-        });
+        }); 
     }
 
     init() {
