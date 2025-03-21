@@ -4,7 +4,7 @@
     $dine_in_menu = get_field('dine_in_menu', 'option');
     $set_menu     = get_field('set_menu', 'option');
 
-    $classes      = (is_single() || is_privacy_policy()) ? 'dark' : '';
+    $classes      = (is_single() || is_privacy_policy() || is_404()) ? 'dark' : '';
 ?>  
 
 <header class="headroom fixed top-0 left-0 right-0 flex items-center justify-between py-[13px] md:py-5 px-5 md:px-[30px] <?php print $classes; ?>">
