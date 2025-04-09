@@ -2,7 +2,7 @@
 
 # Check if all required parameters are provided
 if [ "$#" -ne 3 ]; then
-    echo "Usage: $0  <Block category e.g. kudosnyc> <Block id e.g. grid-people> <Block name e.g. \"Grid of People\">"
+    echo "Usage: $0  <Block category e.g. tbs> <Block id e.g. grid-people> <Block name e.g. \"Grid of People\">"
     exit 1
 fi
 
